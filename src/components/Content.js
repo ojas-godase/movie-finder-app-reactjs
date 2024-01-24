@@ -65,7 +65,7 @@ export default function Content() {
             <Search handleFavourites={handleFavourites}/>
         </div>
         <div className="favourites">
-            {favMovies && favMovies.length!==1 && <div className='movies-list'>
+            {favMovies!=null && favMovies.length!==1 && <div className='movies-list'>
                 <p className='section-title'>Favourites</p>
                 <div className="section">
                     {favMovies.slice(0,favMovies.length-1).map((movie , index)=>{
