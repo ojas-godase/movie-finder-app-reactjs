@@ -37,7 +37,7 @@ body{
   overflow-x: scroll;
   flex-wrap: nowrap;
   scroll-snap-type: inline mandatory;
-  mask: linear-gradient(90deg , transparent,white 2% , white 80% , transparent);
+  mask: linear-gradient(90deg , transparent,white 1% , white 80% , transparent);
   -webkit-mask: linear-gradient(90deg , transparent,white 20% , white 80% , transparent);
   
 }
