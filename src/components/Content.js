@@ -12,7 +12,10 @@ export default function Content() {
 
     useEffect(() => {
         const fav = (JSON.parse(localStorage.getItem("favourite-movies")))
-        setFavMovies(fav)
+        if(fav!==null) {
+            setFavMovies(fav)
+        }
+        
     },[])
     async function  getPopularMovies() {
         const res = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=de0ab00b6499e5edaf7a5f49fb56bd1f")
@@ -65,7 +68,7 @@ export default function Content() {
             <Search handleFavourites={handleFavourites}/>
         </div>
         <div className="favourites">
-            {favMovies!=null && favMovies.length!==1 && <div className='movies-list'>
+            {favMovies!==null ?  favMovies.length!==1 && <div className='movies-list'>
                 <p className='section-title'>Favourites</p>
                 <div className="section">
                     {favMovies.slice(0,favMovies.length-1).map((movie , index)=>{
@@ -75,7 +78,7 @@ export default function Content() {
                             </div>
                     })}
                 </div>
-            </div>}
+            </div> : <div></div>}
         </div>
         {popularMovies && < Movies movies={popularMovies} sectiontitle="Popular" handleFavourites={handleFavourites}/>}
         {topRated && < Movies movies={topRated} sectiontitle="Top Rated" handleFavourites={handleFavourites}/>}
