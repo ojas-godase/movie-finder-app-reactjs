@@ -1,38 +1,122 @@
-.App {
+body{
+  background-color: #121212;
+}
+.NavBar{
+  background-color: #121212;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+.title{
+  margin-top: 15px;
+  font-size: 45px;
+  color: #f5c518;
+  margin-bottom: 1.5rem;
+}
+.content{
+  color: #ffffff;
+}
+.images{
+  width: 12rem;
+  padding: 0.5rem;
+  margin-bottom: -0.5rem;
+}
+
+.section-title{
+  margin-top: -0.1rem;
+  margin-left: 1.3rem;
+  font-size: 30px;
+  color: #ffffff;
+  
+}
+.section{
+  margin-left: 1rem;
+  background-color: #1a1a1a;
+  gap: 1rem;
+  display: flex;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  scroll-snap-type: inline mandatory;
+  mask: linear-gradient(90deg , transparent,white 10% , white 80% , transparent);
+  -webkit-mask: linear-gradient(90deg , transparent,white 20% , white 80% , transparent);
+  
+}
+
+.movie-container{
+  padding: 0.5rem;
+  padding-bottom: -1rem;
+  position: relative;
+  transition: transform 0.2s;
+  text-align: left;
+  box-shadow: 10px;
+  
+}
+
+.section > * {
+  scroll-snap-align: center;
+  
+}
+.movie-container:hover{
+  transform: scale(1.1);
+  opacity: 2;
+  cursor: pointer;
+}
+.movie-title{
+  font-size: 2.2rem;
+  margin-left: 0.4rem;
+  margin-top: -0.8rem;
+  max-width: 12rem;
+  margin-bottom: 0.5px;  
+}
+.movies-list{
+  margin-top: 1.5rem;
+}
+.rating{
+  display: flex;
+  gap: 0.5rem;
+  
+}
+.star{
+  margin-left: 0.2rem;
+  font-size:300%;
+  color:#f5c518;
+  font-size: 1.5rem;
+}
+.rating{
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #b5b5b5;
+}
+.input{
+  width: 20rem;
+  height: 2rem;
+  background-color: #ffffff;
+  border: none ;
+  border-radius: 1rem;
+  padding: 2px;
+  padding-left: 1rem;
+}
+#search-results{
+  display: flex;
+  justify-content: left;
+}
+.fav-btn{
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
   color: white;
+  margin-left: 0.4rem;
+  font-size: larger;
+  border: none;
+  border-radius: 3rem;
+  background-color: #121212;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.heart{
+  margin-left: 0.6rem;
+  font-size: larger;
+  color: 	#d83131;
+  
 }
